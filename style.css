@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-size: 22px;
+	text-shadow: 0px 0px 1px #aaa;
+	font-family: Helvetica;
+	font-family: "Helvetica","Arial", Sans-Serif;
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+  background: url("assets/background.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: rgba(100, 100, 100, 0.9);
+  color: #F7F7F7;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 1024px;
+  text-align: center;
+}
+
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  height: auto;
+  cursor: zoom-in;
+}
+
+#modal-img.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95vw;
+  max-height: 95vh;
+  z-index: 2000;
+  cursor: zoom-out;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.6);
+  background: #000;
+}
+
+#modal-close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/*Correction du curseur pour indiquer si c'est cliquable ou non*/
+.leaflet-interactive {
+  cursor: default;
+}
+
