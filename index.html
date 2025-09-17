@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Carte interactive Mecha Break</title>
-  <link rel="stylesheet" href="leaflet/leaflet.css" />
-  <link rel="stylesheet" href="leaflet-draw/leaflet.draw.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-<div id="controls">
-    <h3>Calques</h3>
-    <div class="control-group">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carte interactive Mecha Break</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="leaflet-draw/leaflet.draw.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div id="controls">
+      <h3>Calques</h3>
+      <div class="control-group">
         <div class="master-control">
-            <input type="checkbox" id="toggle-all-icons" checked>
-            <label for="toggle-all-icons">Icônes</label>
+          <input type="checkbox" id="toggle-all-icons" checked />
+          <label for="toggle-all-icons">Icônes</label>
         </div>
         <div id="controls-icones" class="control-subgroup"></div>
-    </div>
-    
-    <div class="control-group">
+      </div>
+
+      <div class="control-group">
         <div class="master-control">
-            <input type="checkbox" id="toggle-all-zones" checked>
-            <label for="toggle-all-zones">Zones</label>
+          <input type="checkbox" id="toggle-all-zones" checked />
+          <label for="toggle-all-zones">Zones</label>
         </div>
         <div id="controls-zones" class="control-subgroup"></div>
+      </div>
     </div>
-</div>
 
-  <div id="map"></div>
+    <div id="map"></div>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="modal-close">&times;</span>
-      <img id="modal-img" src="" alt="illustration" />
-      <p id="modal-text"></p>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close">&times;</span>
+        <img id="modal-img" src="" alt="illustration" />
+        <p id="modal-text"></p>
+      </div>
     </div>
-  </div>
 
-  <script src="leaflet/leaflet.js"></script>
-  <script src="leaflet-draw/leaflet.draw.js"></script>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
-</body>
-<footer>
-  <p>Crée par Syphala, pour la communauté <a href="https://mechabreak.seasungames.com/">Mecha Break</a>. Vous pouvez avoir plus d'information sur le Mashmak <a href="https://mechabreak.seasungames.com/zt/msmk/fr/index.html#/">ici</a></p>
-</footer>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="leaflet-draw/leaflet.draw.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+  <footer>
+    <p>Crée par <strong>Syphala</strong>, pour la communauté <a href="https://mechabreak.seasungames.com/">Mecha Break</a></p>
+    <p>Vous pouvez avoir plus d'information sur le Mashmak <a href="https://mechabreak.seasungames.com/zt/msmk/fr/index.html#/">ici</a></p>
+  </footer>
 </html>
