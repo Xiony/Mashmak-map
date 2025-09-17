@@ -3,7 +3,7 @@ const DEBUG_MODE = false; // true pour activer l'édition
 // Initialisation de la carte
 const map = L.map("map", {
   crs: L.CRS.Simple,
-  minZoom: 0,
+  minZoom: -0.3,
   maxZoom: 1.5,
   center: [512, 512],
   zoom: 0,
