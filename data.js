@@ -67,6 +67,7 @@ const ICONS_DATA = [
   { category: CAT_FUSEE, coords: [589.5, 916.75], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [329.25, 799.25], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [645.5, 349.75], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [363,129], icon: ICO_FUSEE },
   // #endregion
   // #region Vaisseaux de renforts
   { category: CAT_VAISSEAU_RENFORTS, coords: [852.5, 914], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829232753_1.webp" },
