@@ -1,4 +1,4 @@
-const DEBUG_MODE = true; // true pour activer l'édition
+const DEBUG_MODE = false; // true pour activer l'édition
 
 // Initialisation de la carte
 const map = L.map("map", {
@@ -34,25 +34,50 @@ const categories = {};
 const ICON_SIZE = [35, 35]; // taille fixe
 const ICON_SIZE_ANCHOR = [30, 30]; // taille fixe
 
+function createControlLine(category, iconUrl, isZone = false, color = null) {
+  const controlLine = document.createElement("div");
+  controlLine.className = "control-line";
+  
+  // Créer l'élément visuel (icône ou cercle)
+  const visualElement = document.createElement(isZone ? "div" : "img");
+  if (isZone) {
+    visualElement.className = "control-circle";
+    visualElement.style.backgroundColor = color;
+  } else {
+    visualElement.className = "control-icon";
+    visualElement.src = iconUrl;
+    visualElement.alt = category;
+  }
+  
+  // Créer la checkbox
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.id = `toggle-${category}`;
+  checkbox.checked = true;
+  
+  // Créer le label
+  const label = document.createElement("label");
+  label.htmlFor = checkbox.id;
+  label.textContent = " " + category;
+  
+  // Assembler les éléments
+  controlLine.appendChild(visualElement);
+  controlLine.appendChild(checkbox);
+  controlLine.appendChild(label);
+  
+  return { controlLine, checkbox };
+}
+
+//Gestion des icones
 ICONS_DATA.forEach(item => {
-  // Créer le groupe si besoin
+
   if (!categories[item.category]) {
     categories[item.category] = L.layerGroup().addTo(map);
-
-    // Ajouter la checkbox
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.id = `toggle-${item.category}`;
-    checkbox.checked = true;
-
-    const label = document.createElement("label");
-    label.htmlFor = checkbox.id;
-    label.textContent = " " + item.category;
-
-    document.getElementById("controls").appendChild(checkbox);
-    document.getElementById("controls").appendChild(label);
-    document.getElementById("controls").appendChild(document.createElement("br"));
-
+    
+    // Créer la ligne de contrôle avec icône
+    const { controlLine, checkbox } = createControlLine(item.category, item.icon);
+    document.getElementById("controls-icones").appendChild(controlLine);
+    
     checkbox.addEventListener("change", e => {
       if (e.target.checked) map.addLayer(categories[item.category]);
       else map.removeLayer(categories[item.category]);
@@ -79,27 +104,20 @@ ICONS_DATA.forEach(item => {
 
 //Gestion des zones
 ZONES_DATA.forEach(zone => {
+
   if (!categories[zone.category]) {
     categories[zone.category] = L.layerGroup().addTo(map);
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.checked = true;
-    checkbox.id = `toggle-${zone.category}`;
-
-    const label = document.createElement("label");
-    label.htmlFor = checkbox.id;
-    label.textContent = " " + zone.category;
-
-    document.getElementById("controls").appendChild(checkbox);
-    document.getElementById("controls").appendChild(label);
-    document.getElementById("controls").appendChild(document.createElement("br"));
-
+    
+    // Créer la ligne de contrôle avec cercle coloré
+    const { controlLine, checkbox } = createControlLine(zone.category, null, true, zone.color);
+    document.getElementById("controls-zones").appendChild(controlLine);
+    
     checkbox.addEventListener("change", e => {
       if (e.target.checked) map.addLayer(categories[zone.category]);
       else map.removeLayer(categories[zone.category]);
     });
   }
+
   L.circle(zone.center, {
     radius: zone.radius,
     color: zone.color,
@@ -132,6 +150,57 @@ function openModal(imgSrc, text) {
 modalClose.onclick = () => { modal.style.display = "none"; };
 window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
 
+// Gestion de la checkbox maître pour les icônes
+document.getElementById('toggle-all-icons').addEventListener('change', function(e) {
+    const checkboxes = document.querySelectorAll('#controls-icones input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = e.target.checked;
+        // Déclencher l'événement change pour chaque checkbox
+        checkbox.dispatchEvent(new Event('change'));
+    });
+});
+
+// Gestion de la checkbox maître pour les zones
+document.getElementById('toggle-all-zones').addEventListener('change', function(e) {
+    const checkboxes = document.querySelectorAll('#controls-zones input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = e.target.checked;
+        checkbox.dispatchEvent(new Event('change'));
+    });
+});
+
+// Mettre à jour l'état des checkboxes maîtres quand les enfants changent
+function updateMasterCheckbox(masterId, containerId) {
+    const checkboxes = document.querySelectorAll(`#${containerId} input[type="checkbox"]`);
+    const masterCheckbox = document.getElementById(masterId);
+    
+    if (checkboxes.length === 0) return;
+    
+    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+    const allUnchecked = Array.from(checkboxes).every(cb => !cb.checked);
+    
+    if (allChecked) {
+        masterCheckbox.checked = true;
+        masterCheckbox.indeterminate = false;
+    } else if (allUnchecked) {
+        masterCheckbox.checked = false;
+        masterCheckbox.indeterminate = false;
+    } else {
+        masterCheckbox.checked = false;
+        masterCheckbox.indeterminate = true;
+    }
+}
+
+// Écouter les changements sur les checkboxes enfants
+document.addEventListener('change', function(e) {
+    if (e.target.matches('#controls-icones input[type="checkbox"]')) {
+        updateMasterCheckbox('toggle-all-icons', 'controls-icones');
+    }
+    if (e.target.matches('#controls-zones input[type="checkbox"]')) {
+        updateMasterCheckbox('toggle-all-zones', 'controls-zones');
+    }
+});
+
 if (DEBUG_MODE) {
   // Ajout des contrôles de dessin
   const drawControl = new L.Control.Draw({
@@ -160,7 +229,7 @@ if (DEBUG_MODE) {
       const radius = layer.getRadius();
 
       console.log("Cercle centre :", center);
-      console.log("[" + center.lat + "," + center.lng + "]");
+      console.log("[" + Math.round(center.lat) + "," + Math.round(center.lng) + "]");
       console.log("Rayon :", radius);
     }
 
