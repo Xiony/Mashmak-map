@@ -159,3 +159,10 @@ footer p {
 .leaflet-interactive {
   cursor: default;
 }
+
+.leaflet-marker-icon.icon-pointer {
+  cursor: pointer;
+}
+.leaflet-marker-icon.icon-default {
+  cursor: default;
+}
