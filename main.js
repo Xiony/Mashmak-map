@@ -201,6 +201,14 @@ document.addEventListener('change', function(e) {
     }
 });
 
+//Ajout d'un effet collapse pour le menu calque :
+  const btn = document.getElementById('toggle-controls');
+  const content = document.getElementById('controls-content');
+
+  btn.addEventListener('click', () => {
+    content.classList.toggle('collapsed');
+  });
+
 if (DEBUG_MODE) {
   // Ajout des contrôles de dessin
   const drawControl = new L.Control.Draw({

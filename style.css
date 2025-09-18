@@ -25,6 +25,28 @@ body {
   max-height: 80vh;
 }
 
+#toggle-controls {
+  width: 100%;
+  background: #ddd;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+#controls-content {
+  overflow: hidden;
+  max-height: 1000px; /* grand pour contenir tout */
+  transition: max-height 0.4s ease;
+}
+
+#controls-content.collapsed {
+  max-height: 0;
+  padding: 0;
+}
+
 .control-line {
   display: flex;
   align-items: center;
