@@ -230,3 +230,31 @@ const ZONES_DATA = [
   { category: CAT_RENTABLE, center: [328, 931], radius: 26, color: COLOR_RENTABLE },
   // #endregion
 ];
+// Descriptions des icones
+const DESC_FOREUSE = "Les positions des foreuses peuvent varier et sont indiquées sur la carte au début de la partie.";
+const DESC_FREGATE = "Les icônes 100% indiquent les frégates toujours présentes, les autres peuvent varier.";
+const DESC_CANON = "Les positions des canons peuvent varier et sont indiquées sur la carte au début de la partie.";
+const DESC_MINI_BOSS = "Ils apparaissent en entrant dans la zone ou après avoir vaincu assez d’ennemis.";
+const DESC_CONSTANTINE = "Boss rare pouvant apparaître aléatoirement sur la carte après un certain temps (il se peut qu’il n’apparaisse pas).";
+const DESC_VAISSEAU_RENFORTS = "Ils apparaissent une fois les ennemis et leurs renforts de la zone détruits.";
+const DESC_MARTLET = "Ils apparaissent une fois les ennemis et leurs renforts de la zone détruits.";
+const DESC_FUSEE = "Elles apparaissent aléatoirement après l’attaque d’une zone et la destruction de plusieurs ennemis. Elles sont rares et peuvent ne pas apparaître";
+const DESC_CAISSE_MUNITIONS = "Elles sont toujours présentes dans une zone, mais à un point ou à un autre.";
+const DESC_REPARATEUR = "Elles sont toujours présentes dans une zone, mais à un point ou à un autre.";
+const DESC_ALLOSAURE = "Des char présent à 100%";
+const DESC_MAKALU = "Boss rare pouvant apparaître aléatoirement sur la carte après un certain temps (il se peut qu’il n’apparaisse pas).";
+
+const CATEGORY_DESCRIPTIONS = {
+  [CAT_FOREUSE]: DESC_FOREUSE,
+  [CAT_FREGATE]: DESC_FREGATE,
+  [CAT_CANON]: DESC_CANON,
+  [CAT_MINI_BOSS]: DESC_MINI_BOSS,
+  [CAT_CONSTANTINE]: DESC_CONSTANTINE,
+  [CAT_VAISSEAU_RENFORTS]: DESC_VAISSEAU_RENFORTS,
+  [CAT_MARTLET]: DESC_MARTLET,
+  [CAT_FUSEE]: DESC_FUSEE,
+  [CAT_CAISSE_MUNITIONS]: DESC_CAISSE_MUNITIONS,
+  [CAT_REPARATEUR]: DESC_REPARATEUR,
+  [CAT_ALLOSAURE]: DESC_ALLOSAURE,
+  [CAT_MAKALU]: DESC_MAKALU
+};

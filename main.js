@@ -40,6 +40,8 @@ function createControlLine(category, iconUrl, isZone = false, color = null) {
 
   // Créer l'élément visuel (icône ou cercle)
   const visualElement = document.createElement(isZone ? "div" : "img");
+  // Bouton info
+  const infoBtn = document.createElement("span");
   if (isZone) {
     visualElement.className = "control-circle";
     visualElement.style.backgroundColor = color;
@@ -47,6 +49,31 @@ function createControlLine(category, iconUrl, isZone = false, color = null) {
     visualElement.className = "control-icon";
     visualElement.src = iconUrl;
     visualElement.alt = category;
+
+    // Bouton info
+    infoBtn.className = "info-btn";
+    infoBtn.textContent = "?";
+
+    // Tooltip (caché par défaut)
+    const tooltip = document.createElement("div");
+    tooltip.className = "info-tooltip";
+    tooltip.textContent = CATEGORY_DESCRIPTIONS[category] || "Pas de description disponible.";
+    controlLine.appendChild(tooltip);
+
+    // Toggle au clic
+    infoBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // Ferme toutes les autres tooltips
+      document.querySelectorAll(".info-tooltip.visible").forEach(t => {
+        if (t !== tooltip) {
+          t.classList.remove("visible");
+        }
+      });
+
+      // Bascule uniquement celle de ce bouton
+      tooltip.classList.toggle("visible");
+    });
   }
 
   // Créer la checkbox
@@ -64,9 +91,17 @@ function createControlLine(category, iconUrl, isZone = false, color = null) {
   controlLine.appendChild(visualElement);
   controlLine.appendChild(checkbox);
   controlLine.appendChild(label);
+  if (!isZone) controlLine.appendChild(infoBtn);
 
   return { controlLine, checkbox };
 }
+
+//Ferme toutes les tooltips quand on clique ailleurs
+document.addEventListener("click", () => {
+  document.querySelectorAll(".info-tooltip.visible").forEach(t => {
+    t.classList.remove("visible");
+  });
+});
 
 //Gestion des icones
 ICONS_DATA.forEach(item => {
