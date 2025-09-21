@@ -38,7 +38,7 @@ const ICONS_DATA = [
   { category: CAT_REPARATEUR, coords: [235, 228], icon: ICO_REPARATEUR, image: "assets/capture/20250917194853_1.webp" },
   { category: CAT_REPARATEUR, coords: [229, 256], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [336, 316], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [414, 356], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [414,365], icon: ICO_REPARATEUR, image: "assets/capture/20250920163955_1.webp" },
   { category: CAT_REPARATEUR, coords: [468, 567], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [439, 559], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [148, 539], icon: ICO_REPARATEUR, image: "assets/capture/20250917193935_1.webp" },
@@ -47,13 +47,14 @@ const ICONS_DATA = [
   { category: CAT_REPARATEUR, coords: [176, 868], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [539, 941], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [623, 917], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [881,251], icon: ICO_REPARATEUR, image: "assets/capture/20250920121423_1.webp" },
   { category: CAT_REPARATEUR, coords: [130, 868], icon: ICO_REPARATEUR, image: "assets/capture/20250917193816_1.webp" },
   // #endregion
   // #region Caisse à munitions
   // #endregion
   // #region Fusées cargo
   { category: CAT_FUSEE, coords: [769, 170], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [157, 915], icon: ICO_FUSEE, image: "assets/capture/20250830142353_1.webp" },
+  { category: CAT_FUSEE, coords: [157, 915], icon: ICO_FUSEE, image: "assets/capture/20250920111819_1.webp" },
   { category: CAT_FUSEE, coords: [145, 867], icon: ICO_FUSEE, image: "assets/capture/20250830142110_1.webp" },
   { category: CAT_FUSEE, coords: [84, 732], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [287, 664], icon: ICO_FUSEE },
@@ -66,11 +67,12 @@ const ICONS_DATA = [
   { category: CAT_FUSEE, coords: [904, 917], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [876, 802], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [893, 232], icon: ICO_FUSEE, image: "assets/capture/20250829231856_1.webp" },
-  { category: CAT_FUSEE, coords: [363, 936], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [363, 936], icon: ICO_FUSEE, image: "assets/capture/20250920112249_1.webp" },
   { category: CAT_FUSEE, coords: [589, 916], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [329, 799], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [645, 349], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [645, 349], icon: ICO_FUSEE, image: "assets/capture/20250920161357_1.webp" },
   { category: CAT_FUSEE, coords: [363, 129], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [846,632], icon: ICO_FUSEE, image: "assets/capture/20250920154446_1.webp" },
   // #endregion
   // #region Vaisseaux de renforts
   { category: CAT_VAISSEAU_RENFORTS, coords: [852, 914], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829232753_1.webp" },
