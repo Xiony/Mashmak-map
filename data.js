@@ -83,7 +83,7 @@ const ICONS_DATA = [
   // #region Caisse de ravitaillement
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [184,542], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/2025092411.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [838,799], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250922143353_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [508,936], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923131309_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [322,925], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923131309_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [431,120], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923141940_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [736,241], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923220336_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [129,742], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250924123214_1.webp" },
