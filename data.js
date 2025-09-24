@@ -25,14 +25,17 @@ const CAT_ALLOSAURE = "Allosaure"
 const ICO_ALLOSAURE = "assets/ALLOSAURE.png";
 const CAT_MAKALU = "MAKALU"
 const ICO_MAKALU = "assets/Makalu.png";
+const CAT_CAISSE_RAVITAILLEMENT = "Caisse de ravitaillement"
+const ICO_CAISSE_RAVITAILLEMENT = "assets/Caisse_Ravitaillement.png";
+
 
 const ICONS_DATA = [
   // #region Station de réparation
-  { category: CAT_REPARATEUR, coords: [923, 956], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [923, 956], icon: ICO_REPARATEUR, image: "assets/capture/20250923130240_1.webp" },
   { category: CAT_REPARATEUR, coords: [949, 933], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [914, 696], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [864, 648], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [858, 200], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [869,216], icon: ICO_REPARATEUR, image: "assets/capture/20250921163116_1.webp" },
   { category: CAT_REPARATEUR, coords: [366, 82], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [339, 171], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [235, 228], icon: ICO_REPARATEUR, image: "assets/capture/20250917194853_1.webp" },
@@ -43,17 +46,20 @@ const ICONS_DATA = [
   { category: CAT_REPARATEUR, coords: [439, 559], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [148, 539], icon: ICO_REPARATEUR, image: "assets/capture/20250917193935_1.webp" },
   { category: CAT_REPARATEUR, coords: [169, 520], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [219, 962], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [219, 962], icon: ICO_REPARATEUR, image: "assets/capture/20250923131456_1.webp" },
   { category: CAT_REPARATEUR, coords: [176, 868], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [539, 941], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [623, 917], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [881,251], icon: ICO_REPARATEUR, image: "assets/capture/20250920121423_1.webp" },
   { category: CAT_REPARATEUR, coords: [130, 868], icon: ICO_REPARATEUR, image: "assets/capture/20250917193816_1.webp" },
+  { category: CAT_REPARATEUR, coords: [577,942], icon: ICO_REPARATEUR, image: "assets/capture/20250923140006_1.webp" },
+  { category: CAT_REPARATEUR, coords: [234,287], icon: ICO_REPARATEUR, image: "assets/capture/20250923141744_1.webp" },
+  { category: CAT_REPARATEUR, coords: [365, 129], icon: ICO_REPARATEUR, image: "assets/capture/20250923211740_1.webp" },
   // #endregion
   // #region Caisse à munitions
   // #endregion
   // #region Fusées cargo
-  { category: CAT_FUSEE, coords: [769, 170], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [777,194], icon: ICO_FUSEE, image: "assets/capture/20250921163029_1.webp" },
   { category: CAT_FUSEE, coords: [157, 915], icon: ICO_FUSEE, image: "assets/capture/20250920111819_1.webp" },
   { category: CAT_FUSEE, coords: [145, 867], icon: ICO_FUSEE, image: "assets/capture/20250830142110_1.webp" },
   { category: CAT_FUSEE, coords: [84, 732], icon: ICO_FUSEE },
@@ -65,14 +71,22 @@ const ICONS_DATA = [
   { category: CAT_FUSEE, coords: [553, 222], icon: ICO_FUSEE, image: "assets/capture/20250829225210_1.webp" },
   { category: CAT_FUSEE, coords: [616, 124], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [904, 917], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [876, 802], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [876, 802], icon: ICO_FUSEE, image: "assets/capture/20250921161150_1.webp" },
   { category: CAT_FUSEE, coords: [893, 232], icon: ICO_FUSEE, image: "assets/capture/20250829231856_1.webp" },
   { category: CAT_FUSEE, coords: [363, 936], icon: ICO_FUSEE, image: "assets/capture/20250920112249_1.webp" },
   { category: CAT_FUSEE, coords: [589, 916], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [329, 799], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [645, 349], icon: ICO_FUSEE, image: "assets/capture/20250920161357_1.webp" },
-  { category: CAT_FUSEE, coords: [363, 129], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [354, 129], icon: ICO_FUSEE, image: "assets/capture/20250921185340_1.webp" },
   { category: CAT_FUSEE, coords: [846,632], icon: ICO_FUSEE, image: "assets/capture/20250920154446_1.webp" },
+  // #endregion
+  // #region Caisse de ravitaillement
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [184,542], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/2025092411.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [838,799], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250922143353_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [508,936], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923131309_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [431,120], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923141940_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [736,241], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923220336_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [129,742], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250924123214_1.webp" },
   // #endregion
   // #region Vaisseaux de renforts
   { category: CAT_VAISSEAU_RENFORTS, coords: [852, 914], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829232753_1.webp" },
@@ -243,6 +257,7 @@ const DESC_CAISSE_MUNITIONS = "Elles sont toujours présentes dans une zone, mai
 const DESC_REPARATEUR = "Elles sont toujours présentes dans une zone, mais à un point ou à un autre.";
 const DESC_ALLOSAURE = "Des char présent à 100%";
 const DESC_MAKALU = "Boss rare pouvant apparaître aléatoirement sur la carte après un certain temps (il se peut qu’il n’apparaisse pas).";
+const DESC_CAISSE_RAVITAILLEMENT = "Caisse dorée unique. Trouvable dès le début, mais à ouvrir après 12-14 min. Contient 0 à 4 objets rares.";
 
 const CATEGORY_DESCRIPTIONS = {
   [CAT_FOREUSE]: DESC_FOREUSE,
@@ -256,5 +271,6 @@ const CATEGORY_DESCRIPTIONS = {
   [CAT_CAISSE_MUNITIONS]: DESC_CAISSE_MUNITIONS,
   [CAT_REPARATEUR]: DESC_REPARATEUR,
   [CAT_ALLOSAURE]: DESC_ALLOSAURE,
-  [CAT_MAKALU]: DESC_MAKALU
+  [CAT_MAKALU]: DESC_MAKALU,
+  [CAT_CAISSE_RAVITAILLEMENT]: DESC_CAISSE_RAVITAILLEMENT
 };
