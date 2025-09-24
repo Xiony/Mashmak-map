@@ -1,4 +1,4 @@
-const DEBUG_MODE = true; // true pour activer l'édition
+const DEBUG_MODE = false; // true pour activer l'édition
 
 // Initialisation de la carte
 const map = L.map("map", {
