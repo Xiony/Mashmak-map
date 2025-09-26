@@ -92,6 +92,7 @@ const ICONS_DATA = [
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [830, 158], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/160110.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [228,234], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250924225035_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [888,209], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926153900_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [862,596], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923201858_1.webp" },
   // #endregion
   // #region Vaisseaux de renforts
   { category: CAT_VAISSEAU_RENFORTS, coords: [852, 914], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829232753_1.webp" },
