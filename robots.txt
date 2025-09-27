@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mashmak-map.netlify.app/sitemap.xml
