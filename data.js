@@ -1,5 +1,5 @@
 // Définition des icônes
-const ICO_FOREUSE = "assets/foreuse.png";
+const ICO_FOREUSE = "assets/Foreuse.png";
 const CAT_FOREUSE = "Foreuse colossale";
 const CAT_FREGATE = "Frégate de classe Exil";
 const ICO_FREGATE = "assets/Fregate.png";
