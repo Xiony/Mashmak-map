@@ -8,29 +8,26 @@
     <meta name="description" content="Carte interactive du Mashmak pour la communauté Mecha Break. Zones, icônes et informations utiles pour les joueurs." />
     <meta name="keywords" content="Mecha Break, Mashmak, carte interactive, map, zones, icônes, jeu vidéo" />
     <meta name="author" content="Syphala" />
-
     <!-- Open Graph (réseaux sociaux, Discord, etc.) -->
     <meta property="og:title" content="Carte interactive Mecha Break" />
     <meta property="og:description" content="Explorez la carte interactive du Mashmak pour Mecha Break avec zones et icônes détaillées." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mashmak-map.netlify.app/" />
-    <meta property="og:image" content="https://mashmak-map.netlify.app/apercu.png" />
-
+    <meta property="og:url" content="https://xiony.github.io/Mashmak-map/" />
+    <meta property="og:image" content="https://xiony.github.io/Mashmak-map/apercu.png" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Carte interactive Mecha Break" />
     <meta name="twitter:description" content="Carte interactive du Mashmak pour la communauté Mecha Break." />
-    <meta name="twitter:image" content="https://mashmak-map.netlify.app/aperçu.png" />
+    <meta name="twitter:image" content="https://xiony.github.io/Mashmak-map/apercu.png" />
 
     <!-- Feuilles de style -->
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="leaflet-draw/leaflet.draw.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
     <div id="controls">
-      <button id="toggle-controls">≡ Mashmak-map V1.3.4</button>
+      <button id="toggle-controls">≡ Mashmak-map <span id="app-version"></span></button>
       <div id="controls-content">
         <div class="control-group">
           <div class="master-control">
@@ -60,11 +57,41 @@
         <p id="modal-text"></p>
       </div>
     </div>
-
     <script src="leaflet/leaflet.js"></script>
     <script src="leaflet-draw/leaflet.draw.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+
+    <!-- Bootloader pour mes fichiers -->
+    <script>
+      const APP_VERSION = "1.3.5";
+
+      // Afficher la version dans le bouton
+      document.addEventListener("DOMContentLoaded", () => {
+        const span = document.getElementById("app-version");
+        if (span) {
+          span.textContent = "V" + APP_VERSION;
+        }
+      });
+
+      //Charge mes fichiers avec le numéro de version afin de forcer l'actualisation de la page du navigateur
+      const files = [
+        { type: "css", path: "style.css" },
+        { type: "js", path: "data.js" },
+        { type: "js", path: "main.js" },
+      ];
+
+      files.forEach((file) => {
+        if (file.type === "css") {
+          const l = document.createElement("link");
+          l.rel = "stylesheet";
+          l.href = file.path + "?v=" + APP_VERSION;
+          document.head.appendChild(l);
+        } else {
+          const s = document.createElement("script");
+          s.src = file.path + "?v=" + APP_VERSION;
+          document.body.appendChild(s);
+        }
+      });
+    </script>
   </body>
   <footer>
     <p>Crée par <strong>Syphala</strong>, pour la communauté <a href="https://mechabreak.seasungames.com/">Mecha Break</a></p>

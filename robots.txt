@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mashmak-map.netlify.app/sitemap.xml
+Sitemap: https://xiony.github.io/Mashmak-map/sitemap.xml
