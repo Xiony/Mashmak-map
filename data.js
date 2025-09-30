@@ -49,7 +49,7 @@ const ICONS_DATA = [
   { category: CAT_REPARATEUR, coords: [219, 962], icon: ICO_REPARATEUR, image: "assets/capture/20250923131456_1.webp" },
   { category: CAT_REPARATEUR, coords: [176, 868], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [539, 941], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [623, 917], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [623, 917], icon: ICO_REPARATEUR, image: "assets/capture/20250928165831_1.webp" },
   { category: CAT_REPARATEUR, coords: [881, 251], icon: ICO_REPARATEUR, image: "assets/capture/20250920121423_1.webp" },
   { category: CAT_REPARATEUR, coords: [130, 868], icon: ICO_REPARATEUR, image: "assets/capture/20250917193816_1.webp" },
   { category: CAT_REPARATEUR, coords: [577, 942], icon: ICO_REPARATEUR, image: "assets/capture/20250923140006_1.webp" },
@@ -96,6 +96,7 @@ const ICONS_DATA = [
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [353,179], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926204655_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [904,944], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [605,107], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250929003639_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [782,815], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250929225639_1.webp" },
   // #endregion
   // #region Vaisseaux de renforts
   { category: CAT_VAISSEAU_RENFORTS, coords: [852, 914], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829232753_1.webp" },
@@ -132,6 +133,7 @@ const ICONS_DATA = [
   { category: CAT_FREGATE, coords: [65, 733], icon: ICO_FREGATE, image: "assets/capture/20250917193525_1.webp" },
   { category: CAT_FREGATE, coords: [87, 509], icon: ICO_FREGATE },
   { category: CAT_FREGATE, coords: [254, 58], icon: ICO_FREGATE },
+  { category: CAT_FREGATE, coords: [941, 898], icon: ICO_FREGATE, image: "assets/capture/20250928171014_1.webp" },
   { category: CAT_FREGATE, coords: [317, 942], icon: ICO_FREGATE_100 },
   { category: CAT_FREGATE, coords: [768, 901], icon: ICO_FREGATE_100, image: "assets/capture/20250829221634_1.webp" },
   { category: CAT_FREGATE, coords: [96, 328], icon: ICO_FREGATE_100, image: "assets/capture/20250917194507_1.webp" },
@@ -178,7 +180,6 @@ const ICONS_DATA = [
   { category: CAT_FOREUSE, coords: [283, 678], icon: ICO_FOREUSE },
   { category: CAT_FOREUSE, coords: [179, 86], icon: ICO_FOREUSE },
   { category: CAT_FOREUSE, coords: [540, 224], icon: ICO_FOREUSE },
-  { category: CAT_FREGATE, coords: [941, 898], icon: ICO_FREGATE },
   // #endregion
   // #region Allosaure
   { category: CAT_ALLOSAURE, coords: [352, 166], icon: ICO_ALLOSAURE, image: "assets/capture/20250829224743_1.webp" },
