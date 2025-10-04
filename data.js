@@ -318,7 +318,7 @@ const DESC_MAKALU = "Boss rare pouvant apparaître aléatoirement sur la carte a
 const DESC_CAISSE_RAVITAILLEMENT = "Caisse dorée unique. Trouvable dès le début, mais à ouvrir après 12-14 min. Contient 0 à 4 objets rares.";
 const DESC_DONJON_BLEU = "Vous avez besoin d'un localisateur et une clé bleu pour y accéder (uniquement en équipe). 3 Disponible.";
 const DESC_DONJON_VIOLET = "Vous avez besoin d'un localisateur et une clé violette pour y accéder (uniquement en équipe en mode difficile ou plus). 4 Disponible.";
-const DESC_DONJON_OR = "Vous avez besoin d'un localisateur et une clé or pour y accéder (uniquement en équipe en mode difficile ou plus). 2 Disponible.";
+const DESC_DONJON_OR = "Vous avez besoin d'un localisateur et une clé or pour y accéder.";
 
 const CATEGORY_DESCRIPTIONS = {
   [CAT_FOREUSE]: DESC_FOREUSE,
