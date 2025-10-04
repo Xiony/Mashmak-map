@@ -4,7 +4,7 @@ const DEBUG_MODE = false; // true pour activer l'édition
 const map = L.map("map", {
   crs: L.CRS.Simple,
   minZoom: -0.3,
-  maxZoom: 1.5,
+  maxZoom: 2,
   center: [512, 512],
   zoom: 0,
 
@@ -119,6 +119,9 @@ ICONS_DATA.forEach(item => {
     });
   }
 
+  //Si les valeur sont en 0,0 c'est que c'est juste pour l'affichage de l'icone pour la légende.
+  if (!item.coords || (item.coords[0] === 0 && item.coords[1] === 0)) return;
+
   // Icône par défaut
   const icon = L.icon({
     iconUrl: item.icon,
@@ -127,11 +130,17 @@ ICONS_DATA.forEach(item => {
     className: item.image || item.description ? "icon-pointer" : "icon-default"
   });
 
-  const marker = L.marker(item.coords, { icon }).addTo(categories[item.category]);
+  const marker = L.marker(item.coords, {
+    icon: icon,
+    riseOnHover: true // L'icône se lève au survol
+  }).addTo(categories[item.category]);
 
   // Ajouter modal uniquement si image/description présents
   if (item.image || item.description) {
-    marker.on("click", () => openModal(item.image ?? "", item.description ?? ""));
+    marker.on("click", () => {
+      const descriptionHTML = generateDescriptionHTML(item);
+      openModal(item.image ?? "", descriptionHTML);
+    });
   }
 
   if (DEBUG_MODE) {
@@ -167,6 +176,62 @@ ZONES_DATA.forEach(zone => {
 });
 
 
+// Fonction pour trouver un marqueur par ses coordonnées
+function findMarkerByCoords(coords) {
+  let foundMarker = null;
+
+  // Parcourir toutes les catégories
+  Object.values(categories).forEach(layerGroup => {
+    layerGroup.eachLayer(layer => {
+      if (layer instanceof L.Marker) {
+        const markerCoords = layer.getLatLng();
+        // Comparer les coordonnées (avec une petite marge d'erreur)
+        if (Math.abs(markerCoords.lat - coords[0]) < 1 &&
+          Math.abs(markerCoords.lng - coords[1]) < 1) {
+          foundMarker = layer;
+        }
+      }
+    });
+  });
+
+  return foundMarker;
+}
+
+// Fonction pour animer un marqueur avec la couleur appropriée
+function animateMarker(marker) {
+  const iconElement = marker.getElement();
+  if (!iconElement) return;
+
+  // Déterminer la classe d'animation en fonction de la catégorie
+  let animationClass = 'icon-pulse-default';
+
+  // Trouver l'élément de données correspondant à ce marqueur
+  const markerCoords = marker.getLatLng();
+  const foundItem = ICONS_DATA.find(item =>
+    Math.abs(item.coords[0] - markerCoords.lat) < 1 &&
+    Math.abs(item.coords[1] - markerCoords.lng) < 1
+  );
+
+  if (foundItem) {
+    if (foundItem.category === CAT_DONJON_BLEU) {
+      animationClass = 'icon-pulse-blue';
+    } else if (foundItem.category === CAT_DONJON_VIOLET) {
+      animationClass = 'icon-pulse-purple';
+    } else if (foundItem.category === CAT_DONJON_OR) {
+      animationClass = `icon-pulse-gold`;
+    }
+  }
+
+  // Appliquer l'animation
+  iconElement.classList.add(animationClass);
+  marker.setZIndexOffset(1000);
+
+  // Nettoyer après l'animation
+  setTimeout(() => {
+    iconElement.classList.remove(animationClass);
+  }, 4000); // 8 pulsations × 0.5s = 2s (voir le css)
+}
+
 // Modal
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
@@ -176,7 +241,8 @@ const modalClose = document.getElementById("modal-close");
 function openModal(imgSrc, text) {
   modal.style.display = "block";
   modalImg.src = imgSrc;
-  modalText.textContent = text;
+  modalImg.alt = imgSrc ? "illustration" : "";
+  modalText.innerHTML = text;
 
   // Reset état zoom
   modalImg.classList.remove("fullscreen");
@@ -247,6 +313,75 @@ const content = document.getElementById('controls-content');
 
 btn.addEventListener('click', () => {
   content.classList.toggle('collapsed');
+});
+
+// Fonction pour générer le HTML de description
+function generateDescriptionHTML(item) {
+  if (!item.description) return "";
+
+  let html = '';
+
+  // Si c'est un donjon avec structure détaillée
+  if (typeof item.description === 'object') {
+    html += `
+      <div class="modal-info-grid">
+        <div class="modal-label">Objectif :</div>
+        <div class="modal-value">${item.description.objectif}</div>
+        <div class="modal-label">Vidéo explicative :</div>
+        <div class="modal-value"><a href="${item.description.urlVideo}">Vidéo crée par Knight Valfodr</a></div>
+      </div>
+    `;
+
+    // Ajouter le bouton zoom si des coordonnées de sortie sont spécifiées
+    if (item.description.sortieCoords) {
+      html += `
+  <button class="zoom-button" data-target="${JSON.stringify(item.description.sortieCoords)}">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </svg>
+    Sortie
+  </button>
+`;
+    }
+  }
+  // Si c'est une description simple (string)
+  else if (typeof item.description === 'string') {
+    html = item.description;
+  }
+
+  return html;
+}
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('zoom-button')) {
+    const coordsText = e.target.getAttribute('data-target');
+    if (coordsText) {
+      try {
+        const coords = JSON.parse(coordsText);
+
+        // Ajustement des coordonnées
+        const adjustedCoords = [coords[0] - 20, coords[1] - 20];
+
+        // 1. Trouver et animer le marqueur cible
+        let targetMarker = findMarkerByCoords(coords); // On utilise les coordonnées originales
+
+        if (targetMarker) {
+          animateMarker(targetMarker);
+        }
+
+        // 2. Exécuter le zoom
+        map.flyTo(adjustedCoords, 2, {
+          duration: 1.25,
+          easeLinearity: 0.25
+        });
+
+        modal.style.display = "none";
+
+      } catch (error) {
+        console.error('Erreur parsing JSON:', error);
+      }
+    }
+  }
 });
 
 if (DEBUG_MODE) {

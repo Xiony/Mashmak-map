@@ -8,7 +8,7 @@ const CAT_CANON = "Grand Séparateur";
 const ICO_CANON = "assets/Grand_Separateur.png";
 const CAT_MINI_BOSS = "Strikers de troisiéme génération"
 const ICO_MINI_BOSS = "assets/Boss.png";
-const CAT_CONSTANTINE = "Constantine";
+const CAT_CONSTANTINE = "CONSTANTINE";
 const ICO_CONSTANTINE = "assets/Constantine.png";
 const CAT_VAISSEAU_RENFORTS = "Vaisseau de renforts"
 const ICO_VAISSEAU_RENFORTS = "assets/Vaisseaux_Renforts.png";
@@ -27,23 +27,71 @@ const CAT_MAKALU = "MAKALU"
 const ICO_MAKALU = "assets/Makalu.png";
 const CAT_CAISSE_RAVITAILLEMENT = "Caisse de ravitaillement"
 const ICO_CAISSE_RAVITAILLEMENT = "assets/Caisse_Ravitaillement.png";
+const CAT_DONJON_BLEU = "Zone restreintes bleu"
+const ICO_DONJON_BLEU = "assets/donjon_bleu.png";
+const ICO_DONJON_BLEU_1 = "assets/donjon_bleu_1.png";
+const ICO_DONJON_BLEU_2 = "assets/donjon_bleu_2.png";
+const ICO_DONJON_BLEU_3 = "assets/donjon_bleu_3.png";
+const OBJ_DONJON_BLEU_1 = "Détruire 30 YUTSUYU (sniper). En moins de 2 min.";
+const OBJ_DONJON_BLEU_2 = "Détruire 30 spécimens de corite. En moins de 3 min. <br> Il est conseillé de les détruire en priorité sans combattre les ennemis de la zone.";
+const OBJ_DONJON_BLEU_3 = "Défendez le convois jusqu'à la fin de son parcours. En moins de 4 min.";
+const CAT_DONJON_VIOLET = "Zone restreintes violet"
+const ICO_DONJON_VIOLET = "assets/donjon_violet.png";
+const ICO_DONJON_VIOLET_1 = "assets/donjon_violet_1.png";
+const ICO_DONJON_VIOLET_2 = "assets/donjon_violet_2.png";
+const ICO_DONJON_VIOLET_3 = "assets/donjon_violet_3.png";
+const ICO_DONJON_VIOLET_4 = "assets/donjon_violet_4.png";
+const OBJ_DONJON_VIOLET_1 = "Détruire un extracteur de corite colossal dans une mine. En moins de 4 min.";
+const OBJ_DONJON_VIOLET_2 = "Détruire 3 foreuses rapidement. En moins de 5 min. <br> Il est conseillé de détruire en priorité les bras de sécurité fixer au plafond et les Splitters (ennemi en forme de toupis).";
+const OBJ_DONJON_VIOLET_3 = "5 frégates à tuer rapidement. En moins de 4 min.";
+const OBJ_DONJON_VIOLET_4 = "Zone aérienne, tuer 80 ennemis. En moins de 4 min.<br> Dans cette zone, il est possible d'utiliser des fusées.";
+const CAT_DONJON_OR = "Zone restreintes or"
+const ICO_DONJON_OR = "assets/donjon_or.png";
+const ICO_DONJON_OR_1 = "assets/donjon_or_1.png";
+const OBJ_DONJON_OR_1 = "Vous devez détruire HELLCAT, un boss volant extrêmement puissant. En moins de 4 min. <br>Dans cette zone, il est possible de tomber et de mourir, faites attention.";
 
 
 const ICONS_DATA = [
+  // #region donjon bleu
+  { category: CAT_DONJON_BLEU, coords: [0, 0], icon: ICO_DONJON_BLEU },
+  { category: CAT_DONJON_BLEU, coords: [481, 114], icon: ICO_DONJON_BLEU_1, description: { objectif: OBJ_DONJON_BLEU_1, sortieCoords: [874, 934], urlVideo: "https://youtu.be/9NjYfyimECE?si=9v1qXWYyDxLRLpij&t=65" }, image: "assets/capture/20251002215314_1.webp" },
+  { category: CAT_DONJON_BLEU, coords: [874, 934], icon: ICO_DONJON_BLEU_1, description: { objectif: OBJ_DONJON_BLEU_1, sortieCoords: [481, 114], urlVideo: "https://youtu.be/9NjYfyimECE?si=9v1qXWYyDxLRLpij&t=65" }, image: "assets/capture/20251002215314_1.webp" },
+  { category: CAT_DONJON_BLEU, coords: [338, 184], icon: ICO_DONJON_BLEU_2, description: { objectif: OBJ_DONJON_BLEU_2, sortieCoords: [139, 856], urlVideo: "https://youtu.be/9NjYfyimECE?si=Iaue51xiOc_XIzjb&t=543" } },
+  { category: CAT_DONJON_BLEU, coords: [139, 856], icon: ICO_DONJON_BLEU_2, description: { objectif: OBJ_DONJON_BLEU_2, sortieCoords: [338, 184], urlVideo: "https://youtu.be/9NjYfyimECE?si=Iaue51xiOc_XIzjb&t=543" } },
+  { category: CAT_DONJON_BLEU, coords: [866, 628], icon: ICO_DONJON_BLEU_3, description: { objectif: OBJ_DONJON_BLEU_3, sortieCoords: [940, 269], urlVideo: "https://youtu.be/9NjYfyimECE?si=FCQQyQuMxSYM2y8B&t=216" }, image: "assets/capture/20251001185949_1.webp" },
+  { category: CAT_DONJON_BLEU, coords: [940, 269], icon: ICO_DONJON_BLEU_3, description: { objectif: OBJ_DONJON_BLEU_3, sortieCoords: [866, 628], urlVideo: "https://youtu.be/9NjYfyimECE?si=FCQQyQuMxSYM2y8B&t=216" }, image: "assets/capture/20251001185949_1.webp" },
+  // #endregion
+  // #region donjon violet
+  { category: CAT_DONJON_VIOLET, coords: [0, 0], icon: ICO_DONJON_VIOLET },
+  { category: CAT_DONJON_VIOLET, coords: [790, 432], icon: ICO_DONJON_VIOLET_1, description: { objectif: OBJ_DONJON_VIOLET_1, sortieCoords: [277, 394], urlVideo: "https://youtu.be/9NjYfyimECE?si=ZGWAnDK_LGykjgiz&t=702" }, image: "assets/capture/20251003180429_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [277, 394], icon: ICO_DONJON_VIOLET_1, description: { objectif: OBJ_DONJON_VIOLET_1, sortieCoords: [790, 432], urlVideo: "https://youtu.be/9NjYfyimECE?si=ZGWAnDK_LGykjgiz&t=702" }, image: "assets/capture/20251003180429_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [123, 446], icon: ICO_DONJON_VIOLET_2, description: { objectif: OBJ_DONJON_VIOLET_2, sortieCoords: [886, 96], urlVideo: "https://youtu.be/9NjYfyimECE?si=ZDTzduSbicbHrldD&t=867" }, image: "assets/capture/20251003181429_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [886, 96], icon: ICO_DONJON_VIOLET_2, description: { objectif: OBJ_DONJON_VIOLET_2, sortieCoords: [123, 446], urlVideo: "https://youtu.be/9NjYfyimECE?si=ZDTzduSbicbHrldD&t=867" }, image: "assets/capture/20251003181429_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [431, 910], icon: ICO_DONJON_VIOLET_3, description: { objectif: OBJ_DONJON_VIOLET_3, sortieCoords: [339, 319], urlVideo: "https://youtu.be/9NjYfyimECE?si=YUc2G_4YbWZf3a78&t=1062" }, image: "assets/capture/20251003180936_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [339, 319], icon: ICO_DONJON_VIOLET_3, description: { objectif: OBJ_DONJON_VIOLET_3, sortieCoords: [431, 910], urlVideo: "https://youtu.be/9NjYfyimECE?si=YUc2G_4YbWZf3a78&t=1062" }, image: "assets/capture/20251003180936_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [435, 582], icon: ICO_DONJON_VIOLET_4, description: { objectif: OBJ_DONJON_VIOLET_4, sortieCoords: [155, 148], urlVideo: "https://youtu.be/9NjYfyimECE?si=VFwtHFf2V6nFUN0f&t=1264" }, image: "assets/capture/20251003181242_1.webp" },
+  { category: CAT_DONJON_VIOLET, coords: [155, 148], icon: ICO_DONJON_VIOLET_4, description: { objectif: OBJ_DONJON_VIOLET_4, sortieCoords: [435, 582], urlVideo: "https://youtu.be/9NjYfyimECE?si=VFwtHFf2V6nFUN0f&t=1264" }, image: "assets/capture/20251003181242_1.webp" },
+  // #endregion
+  // #region donjon or
+  { category: CAT_DONJON_OR, coords: [0, 0], icon: ICO_DONJON_OR },
+  { category: CAT_DONJON_OR, coords: [135, 752], icon: ICO_DONJON_OR_1, description: { objectif: OBJ_DONJON_OR_1, sortieCoords: [797, 804], urlVideo: "https://www.youtube.com/watch?v=9NjYfyimECE&t=1445s" } },
+  { category: CAT_DONJON_OR, coords: [797, 804], icon: ICO_DONJON_OR_1, description: { objectif: OBJ_DONJON_OR_1, sortieCoords: [135, 752], urlVideo: "https://www.youtube.com/watch?v=9NjYfyimECE&t=1445s" } },
+  // #endregion
   // #region Station de réparation
   { category: CAT_REPARATEUR, coords: [923, 956], icon: ICO_REPARATEUR, image: "assets/capture/20250923130240_1.webp" },
-  { category: CAT_REPARATEUR, coords: [949, 933], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [914, 696], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [950, 939], icon: ICO_REPARATEUR, image: "assets/capture/20251004200121_1.webp" },
+  { category: CAT_REPARATEUR, coords: [901, 692], icon: ICO_REPARATEUR, image: "assets/capture/20251004201512_1.webp" },
   { category: CAT_REPARATEUR, coords: [864, 648], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [869, 216], icon: ICO_REPARATEUR, image: "assets/capture/20250921163116_1.webp" },
   { category: CAT_REPARATEUR, coords: [366, 82], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [339, 171], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [235, 228], icon: ICO_REPARATEUR, image: "assets/capture/20250917194853_1.webp" },
   { category: CAT_REPARATEUR, coords: [192, 260], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [336, 316], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [347, 328], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [359, 272], icon: ICO_REPARATEUR, image: "assets/capture/20251004202424_1.webp" },
   { category: CAT_REPARATEUR, coords: [414, 365], icon: ICO_REPARATEUR, image: "assets/capture/20250920163955_1.webp" },
-  { category: CAT_REPARATEUR, coords: [468, 567], icon: ICO_REPARATEUR },
-  { category: CAT_REPARATEUR, coords: [439, 559], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [461, 571], icon: ICO_REPARATEUR, image: "assets/capture/20251002225838_1.webp" },
+  { category: CAT_REPARATEUR, coords: [487, 574], icon: ICO_REPARATEUR, image: "assets/capture/20251003181139_1.webp" },
   { category: CAT_REPARATEUR, coords: [148, 539], icon: ICO_REPARATEUR, image: "assets/capture/20250917193935_1.webp" },
   { category: CAT_REPARATEUR, coords: [169, 520], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [219, 962], icon: ICO_REPARATEUR, image: "assets/capture/20250923131456_1.webp" },
@@ -63,22 +111,22 @@ const ICONS_DATA = [
   { category: CAT_FUSEE, coords: [157, 915], icon: ICO_FUSEE, image: "assets/capture/20250920111819_1.webp" },
   { category: CAT_FUSEE, coords: [145, 867], icon: ICO_FUSEE, image: "assets/capture/20250830142110_1.webp" },
   { category: CAT_FUSEE, coords: [84, 732], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [287, 664], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [287, 664], icon: ICO_FUSEE, image: "assets/capture/20251003182426_1.webp" },
   { category: CAT_FUSEE, coords: [150, 546], icon: ICO_FUSEE, image: "assets/capture/20250917193935_1.webp" },
   { category: CAT_FUSEE, coords: [201, 259], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [204, 109], icon: ICO_FUSEE, image: "assets/capture/20250924152935_1.webp" },
   { category: CAT_FUSEE, coords: [462, 50], icon: ICO_FUSEE },
   { category: CAT_FUSEE, coords: [553, 222], icon: ICO_FUSEE, image: "assets/capture/20250829225210_1.webp" },
-  { category: CAT_FUSEE, coords: [616, 124], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [904, 917], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [876, 802], icon: ICO_FUSEE, image: "assets/capture/20250921161150_1.webp" },
+  { category: CAT_FUSEE, coords: [616, 124], icon: ICO_FUSEE, image: "assets/capture/20251004200723_1.webp" },
+  { category: CAT_FUSEE, coords: [904, 917], icon: ICO_FUSEE, image: "assets/capture/20251004195220_1.webp" },
+  { category: CAT_FUSEE, coords: [876, 802], icon: ICO_FUSEE, image: "assets/capture/20251004201609_1.webp" },
   { category: CAT_FUSEE, coords: [893, 232], icon: ICO_FUSEE, image: "assets/capture/20250829231856_1.webp" },
   { category: CAT_FUSEE, coords: [363, 936], icon: ICO_FUSEE, image: "assets/capture/20250920112249_1.webp" },
   { category: CAT_FUSEE, coords: [589, 916], icon: ICO_FUSEE },
-  { category: CAT_FUSEE, coords: [329, 799], icon: ICO_FUSEE },
+  { category: CAT_FUSEE, coords: [330, 803], icon: ICO_FUSEE, image: "assets/capture/20251004200238_1.webp" },
   { category: CAT_FUSEE, coords: [645, 349], icon: ICO_FUSEE, image: "assets/capture/20250920161357_1.webp" },
   { category: CAT_FUSEE, coords: [354, 129], icon: ICO_FUSEE, image: "assets/capture/20250921185340_1.webp" },
-  { category: CAT_FUSEE, coords: [846, 632], icon: ICO_FUSEE, image: "assets/capture/20250920154446_1.webp" },
+  { category: CAT_FUSEE, coords: [846, 632], icon: ICO_FUSEE, image: "assets/capture/20251003002102_1.webp" },
   // #endregion
   // #region Caisse de ravitaillement
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [184, 542], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/2025092411.webp" },
@@ -90,19 +138,19 @@ const ICONS_DATA = [
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [144, 849], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250924183314_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [473, 30], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250919214156_1.webp" },
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [830, 158], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/160110.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [228,234], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250924225035_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [888,209], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926153900_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [862,596], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923201858_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [353,179], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926204655_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [904,944], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [605,107], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250929003639_1.webp" },
-  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [782,815], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250929225639_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [228, 234], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250924225035_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [888, 209], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926153900_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [862, 596], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250923201858_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [353, 179], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926204655_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [904, 944], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250926_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [605, 107], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250929003639_1.webp" },
+  { category: CAT_CAISSE_RAVITAILLEMENT, coords: [782, 815], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/20250929225639_1.webp" },
   // #endregion
   // #region Vaisseaux de renforts
   { category: CAT_VAISSEAU_RENFORTS, coords: [852, 914], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829232753_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [810, 807], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829221544_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [569, 919], icon: ICO_VAISSEAU_RENFORTS },
-  { category: CAT_VAISSEAU_RENFORTS, coords: [363, 924], icon: ICO_VAISSEAU_RENFORTS },
+  { category: CAT_VAISSEAU_RENFORTS, coords: [363, 924], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20251004195833_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [186, 942], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250830142834_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [122, 863], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250830142125_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [124, 541], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250917194030_1.webp" },
@@ -111,7 +159,7 @@ const ICONS_DATA = [
   { category: CAT_VAISSEAU_RENFORTS, coords: [325, 121], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829224651_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [457, 42], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829224907_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [563, 206], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829225210_1.webp" },
-  { category: CAT_VAISSEAU_RENFORTS, coords: [598, 120], icon: ICO_VAISSEAU_RENFORTS },
+  { category: CAT_VAISSEAU_RENFORTS, coords: [598, 120], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20251004194222_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [698, 324], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829230715_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [857, 105], icon: ICO_VAISSEAU_RENFORTS, image: "assets/capture/20250829231414_1.webp" },
   { category: CAT_VAISSEAU_RENFORTS, coords: [794, 228], icon: ICO_VAISSEAU_RENFORTS_POSSIBLE, image: "assets/capture/20250829231728_1.webp", description: "Il n’est pas sûr à 100% : de nombreuses fois j’ai nettoyé la zone sans qu’il apparaisse, et je ne connais pas la condition pour le faire apparaître." },
@@ -122,9 +170,9 @@ const ICONS_DATA = [
   { category: CAT_VAISSEAU_RENFORTS, coords: [584, 925], icon: ICO_VAISSEAU_RENFORTS_POSSIBLE, image: "assets/capture/20250829222925_1.webp", description: "Il est possible d'avoir un deuxiéme vaisseaux de renfort aprés le premier (pas à 100%)." },
   // #endregion
   // #region MARTLET
-  { category: CAT_MARTLET, coords: [860, 589], icon: ICO_MARTLET },
+  { category: CAT_MARTLET, coords: [860, 589], icon: ICO_MARTLET, image: "assets/capture/20251004201311_1.webp", description: "Nettoyer la zone du haut pour le faire apparaitre." },
   { category: CAT_MARTLET, coords: [80, 716], icon: ICO_MARTLET, image: "assets/capture/20250917193708_1.webp", description: "Nettoyer la zone pour le faire apparaitre." },
-  { category: CAT_MARTLET, coords: [362, 336], icon: ICO_MARTLET },
+  { category: CAT_MARTLET, coords: [362, 336], icon: ICO_MARTLET, image: "assets/capture/20251004202604_1.webp" },
   // #endregion
   // #region Fregate
   { category: CAT_FREGATE, coords: [646, 921], icon: ICO_FREGATE, image: "assets/capture/20250829221815_1.webp" },
@@ -134,7 +182,7 @@ const ICONS_DATA = [
   { category: CAT_FREGATE, coords: [87, 509], icon: ICO_FREGATE },
   { category: CAT_FREGATE, coords: [254, 58], icon: ICO_FREGATE },
   { category: CAT_FREGATE, coords: [941, 898], icon: ICO_FREGATE, image: "assets/capture/20250928171014_1.webp" },
-  { category: CAT_FREGATE, coords: [317, 942], icon: ICO_FREGATE_100 },
+  { category: CAT_FREGATE, coords: [317, 942], icon: ICO_FREGATE_100, image: "assets/capture/20251004195802_1.webp" },
   { category: CAT_FREGATE, coords: [768, 901], icon: ICO_FREGATE_100, image: "assets/capture/20250829221634_1.webp" },
   { category: CAT_FREGATE, coords: [96, 328], icon: ICO_FREGATE_100, image: "assets/capture/20250917194507_1.webp" },
   { category: CAT_FREGATE, coords: [93, 284], icon: ICO_FREGATE_100, image: "assets/capture/20250829224305_1.webp" },
@@ -145,7 +193,7 @@ const ICONS_DATA = [
   { category: CAT_CONSTANTINE, coords: [91, 781], icon: ICO_CONSTANTINE },
   { category: CAT_CONSTANTINE, coords: [256, 261], icon: ICO_CONSTANTINE },
   { category: CAT_CONSTANTINE, coords: [464, 339], icon: ICO_CONSTANTINE },
-  { category: CAT_CONSTANTINE, coords: [283, 66], icon: ICO_CONSTANTINE },
+  { category: CAT_CONSTANTINE, coords: [283, 66], icon: ICO_CONSTANTINE, image: "assets/capture/20251003162704_1.webp" },
   { category: CAT_CONSTANTINE, coords: [411, 134], icon: ICO_CONSTANTINE },
   { category: CAT_CONSTANTINE, coords: [80, 482], icon: ICO_CONSTANTINE },
   // #endregion
@@ -153,33 +201,33 @@ const ICONS_DATA = [
   { category: CAT_MAKALU, coords: [607, 100], icon: ICO_MAKALU, image: "assets/capture/20250831192852_1.webp" },
   { category: CAT_MAKALU, coords: [843, 252], icon: ICO_MAKALU, image: "assets/capture/20250925172649_1.webp" },
   { category: CAT_MAKALU, coords: [448, 552], icon: ICO_MAKALU, image: "assets/capture/20250919200529_1.webp" },
-  { category: CAT_MAKALU, coords: [597, 469], icon: ICO_MAKALU },
+  { category: CAT_MAKALU, coords: [597, 469], icon: ICO_MAKALU, image: "assets/capture/20251003231019_1.webp" },
   // #endregion
   // #region Canon
   { category: CAT_CANON, coords: [875, 953], icon: ICO_CANON },
   { category: CAT_CANON, coords: [569, 887], icon: ICO_CANON },
-  { category: CAT_CANON, coords: [405, 922], icon: ICO_CANON },
+  { category: CAT_CANON, coords: [405, 922], icon: ICO_CANON, image: "assets/capture/20251003181732_1.webp" },
   { category: CAT_CANON, coords: [218, 920], icon: ICO_CANON },
   { category: CAT_CANON, coords: [143, 519], icon: ICO_CANON, image: "assets/capture/20250917193914_1.webp" },
   { category: CAT_CANON, coords: [226, 86], icon: ICO_CANON },
   { category: CAT_CANON, coords: [353, 144], icon: ICO_CANON },
   { category: CAT_CANON, coords: [491, 37], icon: ICO_CANON },
-  { category: CAT_CANON, coords: [944, 300], icon: ICO_CANON },
+  { category: CAT_CANON, coords: [944, 300], icon: ICO_CANON, image: "assets/capture/20251003182556_1.webp" },
   { category: CAT_CANON, coords: [892, 601], icon: ICO_CANON },
-  { category: CAT_CANON, coords: [800, 819], icon: ICO_CANON },
+  { category: CAT_CANON, coords: [800, 819], icon: ICO_CANON, image: "assets/capture/20251004200029_1.webp" },
   { category: CAT_CANON, coords: [300, 662], icon: ICO_CANON, image: "assets/capture/20250917195241_1.webp" },
   { category: CAT_CANON, coords: [204, 269], icon: ICO_CANON },
-  { category: CAT_CANON, coords: [335, 330], icon: ICO_CANON },
+  { category: CAT_CANON, coords: [332, 329], icon: ICO_CANON, image: "assets/capture/20251004202324_1.webp" },
   { category: CAT_CANON, coords: [796, 119], icon: ICO_CANON },
   { category: CAT_CANON, coords: [135, 844], icon: ICO_CANON },
   { category: CAT_CANON, coords: [731, 258], icon: ICO_CANON },
   // #endregion
   // #region Foreuse
-  { category: CAT_FOREUSE, coords: [670, 555], icon: ICO_FOREUSE },
-  { category: CAT_FOREUSE, coords: [411, 805], icon: ICO_FOREUSE },
-  { category: CAT_FOREUSE, coords: [283, 678], icon: ICO_FOREUSE },
-  { category: CAT_FOREUSE, coords: [179, 86], icon: ICO_FOREUSE },
-  { category: CAT_FOREUSE, coords: [540, 224], icon: ICO_FOREUSE },
+  { category: CAT_FOREUSE, coords: [670, 555], icon: ICO_FOREUSE, image: "assets/capture/20251003181550_1.webp" },
+  { category: CAT_FOREUSE, coords: [411, 805], icon: ICO_FOREUSE, image: "assets/capture/20251003183221_1.webp" },
+  { category: CAT_FOREUSE, coords: [283, 678], icon: ICO_FOREUSE, image: "assets/capture/20251004203005_1.webp" },
+  { category: CAT_FOREUSE, coords: [179, 86], icon: ICO_FOREUSE, image: "assets/capture/20251004193938_1.webp" },
+  { category: CAT_FOREUSE, coords: [540, 224], icon: ICO_FOREUSE, image: "assets/capture/20251003181506_1.webp" },
   // #endregion
   // #region Allosaure
   { category: CAT_ALLOSAURE, coords: [352, 166], icon: ICO_ALLOSAURE, image: "assets/capture/20250829224743_1.webp" },
@@ -268,6 +316,9 @@ const DESC_REPARATEUR = "Elles sont toujours présentes dans une zone, mais à u
 const DESC_ALLOSAURE = "Des char présent à 100%";
 const DESC_MAKALU = "Boss rare pouvant apparaître aléatoirement sur la carte après un certain temps (il se peut qu’il n’apparaisse pas).";
 const DESC_CAISSE_RAVITAILLEMENT = "Caisse dorée unique. Trouvable dès le début, mais à ouvrir après 12-14 min. Contient 0 à 4 objets rares.";
+const DESC_DONJON_BLEU = "Vous avez besoin d'un localisateur et une clé bleu pour y accéder (uniquement en équipe). 3 Disponible.";
+const DESC_DONJON_VIOLET = "Vous avez besoin d'un localisateur et une clé violette pour y accéder (uniquement en équipe en mode difficile ou plus). 4 Disponible.";
+const DESC_DONJON_OR = "Vous avez besoin d'un localisateur et une clé or pour y accéder (uniquement en équipe en mode difficile ou plus). 2 Disponible.";
 
 const CATEGORY_DESCRIPTIONS = {
   [CAT_FOREUSE]: DESC_FOREUSE,
@@ -282,5 +333,8 @@ const CATEGORY_DESCRIPTIONS = {
   [CAT_REPARATEUR]: DESC_REPARATEUR,
   [CAT_ALLOSAURE]: DESC_ALLOSAURE,
   [CAT_MAKALU]: DESC_MAKALU,
-  [CAT_CAISSE_RAVITAILLEMENT]: DESC_CAISSE_RAVITAILLEMENT
+  [CAT_CAISSE_RAVITAILLEMENT]: DESC_CAISSE_RAVITAILLEMENT,
+  [CAT_DONJON_BLEU]: DESC_DONJON_BLEU,
+  [CAT_DONJON_VIOLET]: DESC_DONJON_VIOLET,
+  [CAT_DONJON_OR]: DESC_DONJON_OR,
 };
