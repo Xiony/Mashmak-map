@@ -229,7 +229,7 @@ function animateMarker(marker) {
   // Nettoyer après l'animation
   setTimeout(() => {
     iconElement.classList.remove(animationClass);
-  }, 4000); // 8 pulsations × 0.5s = 2s (voir le css)
+  }, 4000); // 8 pulsations × 0.5s = 4s (voir le css)
 }
 
 // Modal
@@ -344,7 +344,7 @@ function generateDescriptionHTML(item) {
 `;
     }
   }
-  // Si c'est une description simple (string)
+  // Sinon si c'est une description simple
   else if (typeof item.description === 'string') {
     html = item.description;
   }
@@ -362,14 +362,14 @@ document.addEventListener('click', function (e) {
         // Ajustement des coordonnées
         const adjustedCoords = [coords[0] - 20, coords[1] - 20];
 
-        // 1. Trouver et animer le marqueur cible
-        let targetMarker = findMarkerByCoords(coords); // On utilise les coordonnées originales
+        // Trouve et anime le marqueur cible
+        let targetMarker = findMarkerByCoords(coords);
 
         if (targetMarker) {
           animateMarker(targetMarker);
         }
 
-        // 2. Exécuter le zoom
+        // Exécute le zoom
         map.flyTo(adjustedCoords, 2, {
           duration: 1.25,
           easeLinearity: 0.25
