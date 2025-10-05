@@ -56,8 +56,8 @@ const ICONS_DATA = [
   { category: CAT_DONJON_BLEU, coords: [0, 0], icon: ICO_DONJON_BLEU },
   { category: CAT_DONJON_BLEU, coords: [481, 114], icon: ICO_DONJON_BLEU_1, description: { objectif: OBJ_DONJON_BLEU_1, sortieCoords: [874, 934], urlVideo: "https://youtu.be/9NjYfyimECE?si=9v1qXWYyDxLRLpij&t=65" }, image: "assets/capture/20251002215314_1.webp" },
   { category: CAT_DONJON_BLEU, coords: [874, 934], icon: ICO_DONJON_BLEU_1, description: { objectif: OBJ_DONJON_BLEU_1, sortieCoords: [481, 114], urlVideo: "https://youtu.be/9NjYfyimECE?si=9v1qXWYyDxLRLpij&t=65" }, image: "assets/capture/20251002215314_1.webp" },
-  { category: CAT_DONJON_BLEU, coords: [338, 184], icon: ICO_DONJON_BLEU_2, description: { objectif: OBJ_DONJON_BLEU_2, sortieCoords: [139, 856], urlVideo: "https://youtu.be/9NjYfyimECE?si=Iaue51xiOc_XIzjb&t=543" } },
-  { category: CAT_DONJON_BLEU, coords: [139, 856], icon: ICO_DONJON_BLEU_2, description: { objectif: OBJ_DONJON_BLEU_2, sortieCoords: [338, 184], urlVideo: "https://youtu.be/9NjYfyimECE?si=Iaue51xiOc_XIzjb&t=543" } },
+  { category: CAT_DONJON_BLEU, coords: [338, 184], icon: ICO_DONJON_BLEU_2, description: { objectif: OBJ_DONJON_BLEU_2, sortieCoords: [139, 856], urlVideo: "https://youtu.be/9NjYfyimECE?si=Iaue51xiOc_XIzjb&t=543" }, image: "assets/capture/20251005221625_1.webp" },
+  { category: CAT_DONJON_BLEU, coords: [139, 856], icon: ICO_DONJON_BLEU_2, description: { objectif: OBJ_DONJON_BLEU_2, sortieCoords: [338, 184], urlVideo: "https://youtu.be/9NjYfyimECE?si=Iaue51xiOc_XIzjb&t=543" }, image: "assets/capture/20251005221625_1.webp" },
   { category: CAT_DONJON_BLEU, coords: [866, 628], icon: ICO_DONJON_BLEU_3, description: { objectif: OBJ_DONJON_BLEU_3, sortieCoords: [940, 269], urlVideo: "https://youtu.be/9NjYfyimECE?si=FCQQyQuMxSYM2y8B&t=216" }, image: "assets/capture/20251001185949_1.webp" },
   { category: CAT_DONJON_BLEU, coords: [940, 269], icon: ICO_DONJON_BLEU_3, description: { objectif: OBJ_DONJON_BLEU_3, sortieCoords: [866, 628], urlVideo: "https://youtu.be/9NjYfyimECE?si=FCQQyQuMxSYM2y8B&t=216" }, image: "assets/capture/20251001185949_1.webp" },
   // #endregion
@@ -74,8 +74,8 @@ const ICONS_DATA = [
   // #endregion
   // #region donjon or
   { category: CAT_DONJON_OR, coords: [0, 0], icon: ICO_DONJON_OR },
-  { category: CAT_DONJON_OR, coords: [135, 752], icon: ICO_DONJON_OR_1, description: { objectif: OBJ_DONJON_OR_1, sortieCoords: [797, 804], urlVideo: "https://www.youtube.com/watch?v=9NjYfyimECE&t=1445s" } },
-  { category: CAT_DONJON_OR, coords: [797, 804], icon: ICO_DONJON_OR_1, description: { objectif: OBJ_DONJON_OR_1, sortieCoords: [135, 752], urlVideo: "https://www.youtube.com/watch?v=9NjYfyimECE&t=1445s" } },
+  { category: CAT_DONJON_OR, coords: [135, 752], icon: ICO_DONJON_OR_1, description: { objectif: OBJ_DONJON_OR_1, sortieCoords: [797, 804], urlVideo: "https://www.youtube.com/watch?v=9NjYfyimECE&t=1445s" }, image: "assets/capture/20251005221300_1.webp" },
+  { category: CAT_DONJON_OR, coords: [797, 804], icon: ICO_DONJON_OR_1, description: { objectif: OBJ_DONJON_OR_1, sortieCoords: [135, 752], urlVideo: "https://www.youtube.com/watch?v=9NjYfyimECE&t=1445s" }, image: "assets/capture/20251005221300_1.webp" },
   // #endregion
   // #region Station de réparation
   { category: CAT_REPARATEUR, coords: [923, 956], icon: ICO_REPARATEUR, image: "assets/capture/20250923130240_1.webp" },
@@ -83,7 +83,7 @@ const ICONS_DATA = [
   { category: CAT_REPARATEUR, coords: [901, 692], icon: ICO_REPARATEUR, image: "assets/capture/20251004201512_1.webp" },
   { category: CAT_REPARATEUR, coords: [864, 648], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [869, 216], icon: ICO_REPARATEUR, image: "assets/capture/20250921163116_1.webp" },
-  { category: CAT_REPARATEUR, coords: [366, 82], icon: ICO_REPARATEUR },
+  { category: CAT_REPARATEUR, coords: [366, 82], icon: ICO_REPARATEUR, image: "assets/capture/20251004220712_1.webp" },
   { category: CAT_REPARATEUR, coords: [339, 171], icon: ICO_REPARATEUR },
   { category: CAT_REPARATEUR, coords: [235, 228], icon: ICO_REPARATEUR, image: "assets/capture/20250917194853_1.webp" },
   { category: CAT_REPARATEUR, coords: [192, 260], icon: ICO_REPARATEUR },
@@ -127,6 +127,7 @@ const ICONS_DATA = [
   { category: CAT_FUSEE, coords: [645, 349], icon: ICO_FUSEE, image: "assets/capture/20250920161357_1.webp" },
   { category: CAT_FUSEE, coords: [354, 129], icon: ICO_FUSEE, image: "assets/capture/20250921185340_1.webp" },
   { category: CAT_FUSEE, coords: [846, 632], icon: ICO_FUSEE, image: "assets/capture/20251003002102_1.webp" },
+  { category: CAT_FUSEE, coords: [432, 332], icon: ICO_FUSEE, image: "assets/capture/20251004230218_1.webp" },
   // #endregion
   // #region Caisse de ravitaillement
   { category: CAT_CAISSE_RAVITAILLEMENT, coords: [184, 542], icon: ICO_CAISSE_RAVITAILLEMENT, image: "assets/capture/2025092411.webp" },
@@ -204,7 +205,7 @@ const ICONS_DATA = [
   { category: CAT_MAKALU, coords: [597, 469], icon: ICO_MAKALU, image: "assets/capture/20251003231019_1.webp" },
   // #endregion
   // #region Canon
-  { category: CAT_CANON, coords: [875, 953], icon: ICO_CANON },
+  { category: CAT_CANON, coords: [875, 953], icon: ICO_CANON, image: "assets/capture/20251004223413_1.webp" },
   { category: CAT_CANON, coords: [569, 887], icon: ICO_CANON },
   { category: CAT_CANON, coords: [405, 922], icon: ICO_CANON, image: "assets/capture/20251003181732_1.webp" },
   { category: CAT_CANON, coords: [218, 920], icon: ICO_CANON },
