@@ -192,12 +192,12 @@ const ICONS_DATA = [
   // #endregion
   // #region Constantine
   { category: CAT_CONSTANTINE, coords: [876, 888], icon: ICO_CONSTANTINE, image: "assets/capture/20250829232219_1.webp" },
-  { category: CAT_CONSTANTINE, coords: [596, 966], icon: ICO_CONSTANTINE },
+  { category: CAT_CONSTANTINE, coords: [596, 966], icon: ICO_CONSTANTINE, image: "assets/capture/20251013150748_1.webp" },
   { category: CAT_CONSTANTINE, coords: [91, 781], icon: ICO_CONSTANTINE },
   { category: CAT_CONSTANTINE, coords: [256, 261], icon: ICO_CONSTANTINE },
   { category: CAT_CONSTANTINE, coords: [464, 339], icon: ICO_CONSTANTINE },
   { category: CAT_CONSTANTINE, coords: [283, 66], icon: ICO_CONSTANTINE, image: "assets/capture/20251003162704_1.webp" },
-  { category: CAT_CONSTANTINE, coords: [411, 134], icon: ICO_CONSTANTINE },
+  { category: CAT_CONSTANTINE, coords: [411, 134], icon: ICO_CONSTANTINE, image: "assets/capture/20251013230410_1.webp" },
   { category: CAT_CONSTANTINE, coords: [80, 482], icon: ICO_CONSTANTINE },
   // #endregion
   // #region MAKALU
@@ -221,7 +221,7 @@ const ICONS_DATA = [
   { category: CAT_CANON, coords: [300, 662], icon: ICO_CANON, image: "assets/capture/20250917195241_1.webp" },
   { category: CAT_CANON, coords: [204, 269], icon: ICO_CANON },
   { category: CAT_CANON, coords: [332, 329], icon: ICO_CANON, image: "assets/capture/20251004202324_1.webp" },
-  { category: CAT_CANON, coords: [796, 119], icon: ICO_CANON },
+  { category: CAT_CANON, coords: [796, 119], icon: ICO_CANON, image: "assets/capture/20251012230819_1.webp" },
   { category: CAT_CANON, coords: [135, 844], icon: ICO_CANON },
   { category: CAT_CANON, coords: [731, 258], icon: ICO_CANON },
   // #endregion
